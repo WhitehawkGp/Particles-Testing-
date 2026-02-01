@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Interactive Particles</title>
+  <title>Particles Background</title>
 
   <!-- particles.js -->
   <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
@@ -29,13 +29,8 @@
     .content {
       position: relative;
       z-index: 1;
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      font-family: monospace, sans-serif;
+      padding: 20px;
+      font-family: Arial, sans-serif;
     }
   </style>
 </head>
@@ -45,16 +40,22 @@
   <div id="particles-js"></div>
 
   <div class="content">
-    <h1>PARTICLES</h1>
-    <p>Hover to see interactive lines!</p>
+    <h1>Hello world</h1>
+    <p>This text is in front of the particles.</p>
   </div>
 
   <script>
     particlesJS("particles-js", {
       "particles": {
-        "number": { "value": 80 },
-        "color": { "value": "#ffffff" },
-        "size": { "value": 3 },
+        "number": {
+          "value": 80
+        },
+        "color": {
+          "value": "#ffffff"
+        },
+        "size": {
+          "value": 3
+        },
         "line_linked": {
           "enable": true,
           "distance": 150,
@@ -72,16 +73,12 @@
         "events": {
           "onhover": {
             "enable": true,
-            "mode": "grab"   // 👈 enables lines connecting to cursor
-          },
-          "onclick": {
-            "enable": false
-          },
-          "resize": true
+            "mode": "grab"
+          }
         },
         "modes": {
           "grab": {
-            "distance": 250,  // 👈 hover radius for connecting lines
+            "distance": 200,   // 👈 CHANGE THIS NUMBER
             "line_linked": {
               "opacity": 1
             }
